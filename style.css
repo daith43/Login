@@ -1,0 +1,266 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0 auto;
+  --primary: "Roboto", sans-serif;
+  --secondary: "Open Sans", sans-serif;
+  --color-uno: #3f72ec;
+  --color-dos: #181818;
+  --color-tres: #c9c9c9;
+  font-family: var(--secondary);
+}
+
+body {
+  background-color: var(--color-uno);
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-uno);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  /* max-height: fit-content; */
+  text-align: center;
+  color: #fff;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1500px;
+  position: relative;
+  min-width: fit-content;
+  width: 50%;
+  height: 50%;
+  max-height: fit-content;
+  margin: auto;
+}
+
+.card__side {
+  border-radius: 5px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  transition: all 1.3s ease;
+  backface-visibility: hidden;
+}
+
+#sign-form {
+  transform: rotateY(180deg);
+}
+
+h1 {
+  width: fit-content;
+  font-size: calc(1vw + 20px);
+  padding: 10px 100px;
+  margin-bottom: 20px;
+  color: #181818;
+  text-decoration: underline 3px var(--color-uno);
+}
+
+.login-cont,
+.sign-cont {
+  display: grid;
+  min-width: fit-content;
+  width: 35vw;
+  max-width: 450px;
+  border-radius: 6px;
+  background-color: #fff;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
+  padding: 35px;
+  padding-top: 25px;
+  /*gap: 1rem;*/
+}
+
+.user-cont,
+.password-cont,
+.input-user,
+.input-passwd, 
+.sign-user-cont,
+.sign-password-cont,
+.email-cont,
+.repeat-password-cont {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  height: 40px;
+  margin: 5px 10px;
+  border-bottom: 1px solid var(--color-uno);
+
+  img {
+    width: 20px;
+    height: 20px;
+    user-select: none;
+  }
+
+  input {
+    width: 100%;
+    height: 100%;
+    padding-left: 15px;
+    appearance: none;
+    border: none;
+  }
+}
+
+/*.rojo::placeholder {
+  color: red;
+}*/
+
+.error{
+  /*display: flex;*/
+  width: 90%;
+  gap: 0;
+  color: red;
+  font-size: 12px;
+  text-align: left;
+}
+
+.alert-login, 
+.alert-sign{
+  display: none;
+}
+
+#user:focus,
+#password:focus,
+#sign-user:focus,
+#sign-password:focus,
+#email:focus,
+#repeat-password:focus {
+  outline: none;
+}
+
+.eye {
+  cursor: pointer;
+}
+
+.two-columns {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  padding: 10px;
+  margin: 10px;
+  font-size: 12px;
+}
+
+.remember,
+.terms {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  color: var(--color-dos);
+
+  input {
+    margin-right: 5px;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    width: 15px;
+    height: 15px;
+    appearance: none;
+  }
+
+  input:focus {
+    border: 1px solid rgba(0, 0, 0, 1);
+  }
+
+  input:checked {
+    background-image: url(icons/check.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  p {
+    font-size: 12px;
+    font-weight: 600;
+  }
+}
+
+.terms {
+  padding: 10px 0;
+  margin: 10px;
+  align-items: center;
+  justify-content: left;
+  width: 90%;
+}
+
+.login-btn,
+.sign-btn {
+  width: 90%;
+  cursor: pointer;
+  background-color: var(--color-uno);
+  border: none;
+  border-radius: 6px;
+  padding: 15px 20px;
+  margin: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+
+  &:hover {
+    background-color: #5180ee;
+  }
+
+  &:active {
+    background-color: #215eed;
+  }
+}
+
+.sign-up,
+.login-link-div {
+  color: #181818;
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.login-link, .sign-up-link{
+  font-weight: bold;
+}
+
+/* Medias */
+
+
+
+@media (max-width: 1200px) {
+
+  h1 {
+    white-space: nowrap;
+  }
+
+  .login-cont,
+  .sign-cont {
+    padding: 25px;
+  }
+
+
+.remember,
+.terms {
+  input {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+
+  p {
+    font-size: 11.5px;
+  }
+}
+
+
+}

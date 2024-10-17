@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="icons/favicon.png" type="image/x-icon">
+    <title>Administrar</title>
+</head>
+<body >
+    <div class="container">
+
+        <div class="card">
+            <form id="sign-form" class="card__side" action="">
+                <div class="sign-cont">
+                    <h1>Sign Up</h1>
+        
+                    <div class="sign-user-cont">
+                        <img src="icons/user.svg" alt="">
+                        <input type="text" name="sign-user" id="sign-user" class="sign-input" placeholder="Enter your username" autocomplete="off">
+                    </div>
+                    <p class="alert-sign"></p>
+
+                    <div class="email-cont">
+                        <img src="icons/mail.svg" alt="">
+                        <input type="email" name="email" id="email" class="sign-input" placeholder="Enter your email" autocomplete="off">
+                    </div>
+                    <p class="alert-sign"></p>
+        
+                    <div class="sign-password-cont">
+                        <img src="icons/lock.svg" alt="">
+                        <input type="password" name="sign-password" id="sign-password" class="sign-input" placeholder="Enter your password">
+                        <img src="icons/eye-open.svg" class="eye" alt="">
+                    </div>
+                    <p class="alert-sign"></p>
+
+                    <div class="repeat-password-cont">
+                        <img src="icons/lock.svg" alt="">
+                        <input type="password" name="repeat-password" id="repeat-password" class="sign-input" placeholder="Repeat your password">
+                    </div>
+                    <p class="alert-sign"></p>
+        
+                    <div class="terms">
+                        <input type="checkbox" name="terms" id="terms">
+                        <p>I aceppt all terms & conditions</p>
+                    </div>
+        
+                    <input type="submit" class="sign-btn" value="Signup">
+        
+                    <div class="login-link-div">
+                        Have an account? <a class="login-link" href="#">Login</a>
+                    </div>
+        
+                </div>
+               </form>
+    
+           <form id="login-form" class="card__side" action="">
+            <div class="login-cont">
+                <h1>Login</h1>
+    
+                <div class="user-cont">
+                    <img src="icons/user.svg" alt="">
+                    <input type="text" name="user" id="user" placeholder="User" autocomplete="off">               
+                </div>
+
+                <div class="password-cont">
+                    <img src="icons/lock.svg" alt="">
+                    <input type="password" name="password" id="password" placeholder="Password">
+                    <img src="icons/eye-open.svg" class="eye" alt="">
+                </div>
+                <p class="alert-login"></p>
+    
+               <div class="two-columns">
+                <div class="remember">
+                    <input type="checkbox" name="remember" id="remember">
+                    <p>Remember me</p>
+                </div>
+    
+                <div class="forgot">
+                    <a href="#">Forgot password?</a>
+                </div>
+               </div>
+    
+                <input type="submit" class="login-btn" value="Login">
+    
+                <div class="sign-up">
+                    Not an account? <a class="sign-up-link" href="#">Signup</a>
+                </div>
+    
+            </div>
+           </form>
+        </div>
+
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
