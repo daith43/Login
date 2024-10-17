@@ -1,6 +1,6 @@
 # Login 👨‍💻
 
-## Este sitio web es un proyecto de final del módulo de Lenguaje de Marcas de primero de Desarrollo de Aplicaciones Web (DAW)
+## Ejemplo de Login con validaciones tanto en el Login como en el Sign In, usando JavaScript
 <br>
 
 Link al sitio:
