@@ -43,6 +43,7 @@ let alertSign = document.querySelectorAll(".alert-sign");
 
 let user = "Admin";
 let password = "Asdf1234+";
+
 // Eventos
 
 // Show/Hidden Password
@@ -66,6 +67,11 @@ loginForm.addEventListener("submit", (e) => {
   
   alertLogin.style.display = "none";
   alertLogin.classList.remove('error');
+  
+  if (userInput.value === user && passwordInput.value === password) {
+    localStorage.setItem('Authenticated', true)
+    localStorage.setItem('User', `${user}`)
+  }
 
   if (userInput.value !== user /*&& userInput.value !== ""*/ | passwordInput.value !== password) {
     alertLogin.style.display = "flex";    
@@ -77,7 +83,6 @@ loginForm.addEventListener("submit", (e) => {
   passwordInput.value = "";
 
 });
-
 
 // Submit de Sign Up Form
 signForm.addEventListener("submit", (e) => {
@@ -142,6 +147,9 @@ loginLink.addEventListener("click", () => {
 
   setTimeout(() => {
     signForm.reset();
+    signPassw.placeholder = "Enter your password.";
+    repeatPassw.placeholder = "Enter your password.";
+
     signInputs.forEach((input) => {
       input.classList.remove("rojo");
       terms.style.border = "1px solid rgba(0, 0, 0, 0.5)";
@@ -197,8 +205,8 @@ function passwdMatch() {
     iconPasswdSign.src = "icons/lock.svg";
     iconPasswdRe.src = "icons/lock.svg";
   } else if ((signPassw.value == "") | (repeatPassw.value == "")) {
-    signPassw.classList.add("rojo");
-    repeatPassw.classList.add("rojo");
+    signPassw.classList.remove("rojo");
+    repeatPassw.classList.remove("rojo");
     iconPasswdSign.src = "icons/lock.svg";
     iconPasswdRe.src = "icons/lock.svg";
   } else {
